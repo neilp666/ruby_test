@@ -1,6 +1,6 @@
 Ruby Dev Test
 
-1. Introduction
+1. Introduction - read file and add Rspec
 2. Reads a log file
 3. Returns the list of webpages most to least
 4. Returns the list of unique most to least.
