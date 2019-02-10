@@ -1,4 +1,23 @@
+require 'date'
+
+date = Time.new
+date = date.day.to_s + "/" + date.month.to_s + "/" + date.year.to_s
+time = Time.new
+time = time.hour.to_s + ":" + time.min.to_s
+
+puts "Enter your first name"
+first_name = gets.chomp
+puts "Enter your last name"
+last_name = gets.chomp
+full_name = first_name + " " + last_name
+
+puts "Hello #{full_name}"
+
+
 class Webserver
+
+
+  
   new_webserver = Array.new
   File.open('webserver.log').each { |line| new_webserver << line }
   puts new_webserver
