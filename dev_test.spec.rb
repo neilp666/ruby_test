@@ -21,3 +21,10 @@ RSpec.describe 'count the number of visits' do
                                   )
   end
 end
+
+  describe 'find duplicates' do
+    it 'returns duplicates from an array' do
+      array = [0, 2, 1, 4]
+      expect(array.find_duplicates).to eq([1])
+    end
+  end
