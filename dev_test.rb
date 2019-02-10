@@ -12,11 +12,17 @@ last_name = gets.chomp
 full_name = first_name + " " + last_name
 
 puts "Hello #{full_name}"
+puts "Today's " + date + " " + "And time " + time
+puts "#1 To Display the webserver.log file"
+puts "Press any key to continue or CTRL-C (^C) to quit"
+
+
+gets.chomp
+
+puts "Opening the file..."
 
 
 class Webserver
-
-
   
   new_webserver = Array.new
   File.open('webserver.log').each { |line| new_webserver << line }
