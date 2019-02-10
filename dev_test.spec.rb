@@ -1,8 +1,23 @@
+
 require_relative 'dev_test'
 
-RSpec.describe 'Duplicate removal' do
-  it 'Removes duplicates from an array' do
-    arr = [1, 3, 4, 1, 4]
-    expect(arr.remove_duplicates).to eq[1, 4])
+RSpec.describe 'count the number of visits' do
+  before do
+    @str = " the quick brown fox / jumped over the lazy fox."
+  end
+
+  it 'counts words accurately' do
+    expect(@str.total_words).to eq(9)
+  end
+
+  it 'Returns a hash that totals up the word usage' do
+    expect(@str.word_list).to eq ({"the"=> 2,
+                                  "quick" =>1,
+                                  "brown" =>1,
+                                  "fox" =>2,
+                                  "jumped" =>1,
+                                  "over" =>1,
+                                  "lazy" =>1}
+                                  )
   end
 end
